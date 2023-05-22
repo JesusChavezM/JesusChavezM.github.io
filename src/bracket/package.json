@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "brackets-json-db": "^1.0.2",
+    "brackets-manager": "^1.5.8",
+    "brackets-toornament-layer": "^1.0.2"
+  }
+}

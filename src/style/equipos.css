@@ -1,0 +1,480 @@
+/**
+
+#2A8C4A
+#88BB91
+#D6FADC
+#008BC4
+*/
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #2a8c4a;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+.sidebar.open{
+  width: 250px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details img{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar .logo-details .logo_name{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details img,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+.sidebar i{
+  color: #ffffff;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+  display: none;
+}
+
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #366943;
+}
+.sidebar li a:hover{
+  background: #FFF;
+}
+.sidebar li a .links_name{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #11101D;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li.profile{
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #366943;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar.open li.profile{
+  width: 250px;
+}
+.sidebar li .profile-details{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sidebar li img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.sidebar li.profile .name,
+.sidebar li.profile .job{
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+.sidebar li.profile .job{
+  font-size: 12px;
+}
+.sidebar .profile #log_out{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #366943;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+  
+}
+.sidebar.open .profile #log_out{
+  width: 50px;
+  background: none;
+}
+.home-section{
+  position: relative;
+  background: #D6FADC;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+  
+}
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+.home-section .text{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
+
+/* css del popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+}
+
+
+.popup-content {
+  background-color: #88BB91;
+  max-width: 350px;
+  margin: 100px auto;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(15, 120, 100, 0.3);
+  overflow: auto; 
+  position: relative;
+  padding: 50px 20px;
+}
+.popup-content h1 {
+  font-size: 1.5rem;
+  padding: 10px;
+  color: #000;
+  letter-spacing: 5px;
+  margin-bottom: 35px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.popup-content .inputbox {
+  position: relative;
+  width: 300px;
+  height: 50px;
+  margin-bottom: 50px;
+}
+.popup-content .inputbox input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #000;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  background-color: white;
+}
+
+.popup-content .inputbox select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 2px solid #000;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  background-color: white;
+}
+.popup-content .inputbox select:valid + span {
+  transform: translateX(-13px) translateY(-35px);
+  font-size: 1em;
+}
+
+
+.popup-content .inputbox:last-child {
+  margin-bottom: 0;
+}
+.popup-content .inputbox span {
+  color: #000;
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  font-size: 1em;
+  transition: 0.6s;
+  font-family: sans-serif;
+}
+.popup-content .inputbox input:focus + span,
+.popup-content .inputbox input:valid + span {
+  transform: translateX(-13px) translateY(-35px);
+  font-size: 1em;
+}
+.popup-content .inputbox [type="submit"] {
+  width: 100%;
+  background: #008BC4;
+  color: #fff;
+  border: #fff;
+}
+.popup-content .inputbox:hover [type="submit"] {
+  background: linear-gradient(45deg, greenyellow, dodgerblue);
+}
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+.enviar{
+  background-color: #008BC4;
+  color: #000000;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  margin: 5px;
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*TARJETA DE EQUIPOS*/
+
+.con_equipos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Cambia el tamaño mínimo a 280px */
+  grid-gap: 1rem;
+}
+
+.equipos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid #2A8C4A;
+  background-color: #88BB91;
+  border-radius: 10px;
+  margin: 1rem;
+  /* width: 280px; */ /* Elimina el ancho fijo para permitir que se ajuste automáticamente */
+  padding: 30px;
+}
+.equipos img{
+  margin-top: 8px;
+  padding: 5px;
+}
+.equipos h2{
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+.equipos h3{
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.equipos btn a{
+  background-color: #008BC4;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 16px;
+  text-decoration: none;
+}
+.equipos btn a:hover{
+  background-color: #3d5bb6;
+}
+
+
+/*TARJETA DE JUGADORES*/
+
+.jugadores-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los jugadores se envuelvan en filas */
+  justify-content: center; /* Centra los jugadores horizontalmente */
+  align-items: center;
+}
+
+.jugador {
+  flex: 0 0 270px; /* Establece un ancho fijo de 240px para los jugadores */
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid #2A8C4A;
+  background-color: #F6EDD9;
+  border-radius: 55px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.jugador img{
+  max-width: 50px;
+  max-height: 50px;
+  margin-left: auto;
+}
+
+.jugador h3 {
+  margin: 0.5rem 0;
+  font-size: 16px;
+  color: #000000;
+}
+
+.jugador btn {
+  display: flex; /* Activa el contenedor flex para el botón */
+  justify-content: center; /* Centra horizontalmente el botón */
+  margin-top: 1rem;
+}
+
+.jugador btn a {
+  background-color: #008BC4;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 16px;
+  text-decoration: none;
+}
+
+.jugador btn a:hover {
+  background-color: #3d5bb6;
+}
+
+.agregar {
+  background-color: #F6EDD9;
+  color: #000000;
+  border: 2px solid #2A8C4A;
+  border-radius: 5px;
+  padding: 10px 10px;
+  display: inline-block;
+  text-decoration: none;
+  margin: 5px;
+  margin-left: 4rem;
+  align-self: center;
+  transition: background-color 0.3s ease;
+  width: 100px; /* Ajusta el ancho según tus necesidades */
+  height: 100px; /* Ajusta el alto según tus necesidades */
+}
+
+.agregar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la forma en que se muestra la imagen */
+}
+
+.agregar:hover {
+  background-color: #64c27b;
+  cursor: pointer;
+}
