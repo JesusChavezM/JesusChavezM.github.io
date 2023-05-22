@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/equipos.css?v=<?php echo(rand()); ?>">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="../style/equipos.css" >
+    <link rel="stylesheet" type="text/css" href="./src/style/equipos.css" >
     
     <title>Equipos</title>
 </head>
@@ -99,7 +99,7 @@
         <div class="con_equipos">
             <a class="agregar" id="mas" onclick="openPopup()"><img src="../../img/agregarE.png" alt="logo"></a>        
             <?php
-                include("conexion.php");
+                include("./src/Equipos/conexion.php");
                 //Se llama al archivo que contiene las instrucciones 
                 //para realizar la conexion al a BD
                 if(!$conexion){
