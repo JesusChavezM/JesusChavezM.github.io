@@ -2,7 +2,7 @@
   "name": "nombre-de-tu-aplicacion",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://JesusChavezM.github.io/JesusChavezM.github.io",
+  "homepage": "http://JesusChavezM.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
