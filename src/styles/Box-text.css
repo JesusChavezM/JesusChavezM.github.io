@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap');
+
+
+.box-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 1500px;
+  border: none; /* Eliminamos el borde */
+  font-size: x-large; /* Ajustamos el tamaño del texto a 'x-large' */
+  font-family: 'Lustria', sans-serif; /* Cambiamos la fuente a Comfortaa o la fuente que prefieras */
+  font-weight: bold; /* Usamos 'font-weight' en lugar de 'font-style' para negrita */
+}

@@ -1,0 +1,42 @@
+{
+  "lecciones": [
+    {
+      "numero": "Lección 1",
+      "titulo": "Introducción a la Teoría del Color",
+      "temas": [
+        {
+          "id":"1",
+          "titulo": "Introducción a la Teoría del Color",
+          "descripcion": "Breve descripción del color y su importancia en el diseño visual.",
+          "textos": [
+            "El color es una percepción visual derivada de la luz. En diseño, su comprensión es esencial para transmitir mensajes y emociones.",
+            "La teoría del color nos permite entender cómo los colores interactúan y se combinan, facilitando la creación de diseños visualmente atractivos."
+          ]
+        },
+        {
+          "id":"2",
+          "titulo": "Hue, Saturation y Value (HSV)",
+          "descripcion": "Exploración detallada de los componentes básicos del color.",
+          "textos": [
+            "Hue: Es la propiedad que define el tipo de color, como rojo, verde o azul.",
+            "Saturation: Indica la pureza del color, desde tonos apagados hasta colores vibrantes.",
+            "Value: Representa la luminosidad del color, desde oscuro hasta claro."
+          ]
+        },
+        {
+          "id":"3",
+          "titulo": "Mezcladores de Colores",
+          "descripcion": "Presentación de los principales modelos de mezcla de colores: RGB, HSV y CMYK.",
+          "textos": [
+            "RGB (Red, Green, Blue): Se basa en la combinación de luces para crear colores en pantalla.",
+            "HSV (Hue, Saturation, Value): Proporciona una representación más intuitiva del color para diseñadores.",
+            "CMYK (Cyan, Magenta, Yellow, Key/Black): Utilizado en impresión, mezcla colores sustractivamente."
+          ]
+        }
+      ]
+    },
+    {
+      "numero":"Lección 2"
+    }
+  ]
+}
