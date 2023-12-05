@@ -11,6 +11,7 @@ import Leccion5 from "./components/Leccion5";
 
 import "./App.css";
 import logo from "./images/logo.png";
+import BoxText from "./components/Box-text";
 
 const leccionesData = [
   { id: "leccion1", component: <Leccion1 />, title: "Lección 1" },
@@ -54,7 +55,11 @@ const App = () => {
 
   return (
     <div>
-      <Link to="/" onClick={handleLogoClick} style={{ textDecoration: 'none', color: 'inherit' }}>
+      <Link
+        to="/"
+        onClick={handleLogoClick}
+        style={{ textDecoration: "none", color: "inherit" }}
+      >
         <header className="app-header">
           <div className="logo-container">
             <img src={logo} alt="Logo" className="app-logo" />
@@ -65,6 +70,7 @@ const App = () => {
 
       <div className="app-container">
         {showColorPicker && <ColorPicker />}
+        {showColorPicker && <BoxText text="Haga click en las lecciones ->" />}
         {leccionesData.map((leccion) => (
           <div key={leccion.id}>
             {currentPage === leccion.id &&
